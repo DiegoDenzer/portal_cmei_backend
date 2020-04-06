@@ -11,10 +11,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='-jmx^_5&*g-0yhh-p0(p=w&_^=q@%
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = int(os.environ.get('DEBUG', default=1))
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://cmei-api.herokuapp.com/']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'cmei-api.herokuapp.com', '0.0.0.0']
 
 AUTH_USER_MODEL = 'usuarios.MyUser'
 
@@ -154,8 +154,6 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'pt-br'
 
 TIME_ZONE = 'America/Sao_Paulo'
-
-TIME_ZONE = 'UTC'
 
 USE_I18N = True
 

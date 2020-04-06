@@ -7,7 +7,7 @@ WORKDIR /app
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV DEBUG 0
+ENV DEBUG 1
 
 #Alterando versao do PIP para rodar a merda do PILLOW
 RUN apk add build-base python-dev py-pip jpeg-dev zlib-dev
