@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'portal_fotos'
 ]
 
+
 # allauth
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'  # alterar para produçao

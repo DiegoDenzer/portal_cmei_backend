@@ -1,3 +1,5 @@
+from django.db import models
+
 from portal_fotos.models.pessoa_model import PessoaModel
 
 

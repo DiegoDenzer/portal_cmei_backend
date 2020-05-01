@@ -9,10 +9,7 @@ from usuarios.models import MyUser
 
 
 class CustomUserAdmin(UserAdmin):
-    # form = BaseModelFormrForm
     list_display = ['username', 'email', 'last_login']
-    # prepopulated_fields = {'username': ('first_name', 'last_name',)}
-    # readonly_fields = ['password']
 
     def get_inline_instances(self, request, obj=None):
         if not obj:

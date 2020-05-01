@@ -6,7 +6,7 @@ from portal_fotos.models.pessoa_model import PessoaModel
 
 class AlunoModel(PessoaModel):
     """
-    Classe Aluno.S
+    Classe Aluno
     """
     class Meta:
         db_table = 'aluno'

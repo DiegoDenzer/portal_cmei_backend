@@ -1,28 +1,28 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from portal_fotos.models.turma_model import TurmaModel
-from portal_fotos.serializers.turma_serializer import TurmaSerializer
+from portal_fotos.models.album_model import AlbumModel
+from portal_fotos.serializers.album_serializer import AlbumSerializer
 
 
-class TurmaViewSet(viewsets.ViewSet):
+class AlbumViewSet(viewsets.ViewSet):
     """
-    View da api responsavel por acessar dados da Turma.
+    View da api responsavel por acessar dados do album.
     """
     def list(self, request):
         """
-        Responsavel por acessar as Turmas do Usuario.
+        Responsavel por acessar os Albuns.
         """
-        queryset = TurmaModel.objects.all()
-        serializer = TurmaSerializer(queryset, many=True)
+        queryset = AlbumModel.objects.all()
+        serializer = AlbumSerializer(queryset, many=True)
         return Response(serializer.data)
 
     def create(self, request):
         pass
 
     def retrieve(self, request, pk=None):
-        queryset = TurmaModel.objects.filter(id=pk)
-        serializer = TurmaSerializer(queryset, many=True)
+        queryset = AlbumModel.objects.filter(id=pk)
+        serializer = AlbumSerializer(queryset)
         return Response(serializer.data)
 
     def update(self, request, pk=None):

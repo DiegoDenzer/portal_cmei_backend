@@ -5,7 +5,7 @@ from portal_fotos.models.turma_model import TurmaModel
 
 
 class AlbumModel(BaseModel):
-    # Fields
+    # Campos
     nome = models.CharField(max_length=255)
     descricao = models.TextField(max_length=5000)
     turma = models.ForeignKey(
